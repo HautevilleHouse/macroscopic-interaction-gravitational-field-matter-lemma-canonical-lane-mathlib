@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.MacroscopicInteractionGravitationalFieldMatterLemmaCanonicalLaneLean.SpacetimeContinuumModel
+import HautevilleHouse.MacroscopicInteractionGravitationalFieldMatterLemmaCanonicalLaneLean.FieldEquationsBundle
+
+namespace HautevilleHouse
+namespace MacroscopicInteractionGravitationalFieldMatterLemmaCanonicalLaneLean
+
+structure InteractionCouplingPackage where
+  spacetime : SpacetimeContinuumModel
+  fields : FieldEquationsBundle
+  couplingConstant : Prop
+  interactionTerm : Prop
+  energyMomentumConservation : Prop
+
+def interactionCouplingClosed (I : InteractionCouplingPackage) : Prop :=
+  spacetimeContinuumClosed I.spacetime ∧ fieldEquationsClosed I.fields ∧ I.interactionTerm ∧ I.energyMomentumConservation
+
+end MacroscopicInteractionGravitationalFieldMatterLemmaCanonicalLaneLean
+end HautevilleHouse
